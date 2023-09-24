@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ScoreContext } from '../Context'
 
 const gameOptions = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 
 const Header = () => {
+    const {state : { score }} = useContext(ScoreContext)
+
   return (
     <header>
         <ul>
             {gameOptions.map((gameOption, index) => 
                 <li key={index}>
-                    {gameOption.toUpperCase()}
+                    {gameOption}
                 </li>
             )}
         </ul>
 
         <div>
-            <p>SCORE</p>
-            <h1></h1>
+            <p>Score</p>
+            <h1>{score}</h1>
         </div>
     </header>
   )

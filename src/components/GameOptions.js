@@ -1,11 +1,11 @@
 import { options } from "../options"
 import OptionCard from "./OptionCard"
 
-const GameOptions = () => {
+const GameOptions = ({onOptionSelect}) => {
   return (
     <main>
         {options.map((option, index) => (
-            <button key={index}>
+            <button key={index} onClick={() => onOptionSelect(option.name)}>
                 <OptionCard option={option} />
             </button>
         ))}

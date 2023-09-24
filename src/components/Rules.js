@@ -8,7 +8,7 @@ const Rules = () => {
     const RulesBox = () => {
         return (
             <div>
-                <p>RULES</p>
+                <p>Rules</p>
                 <button onClick={() => setShowRules(false)}><img src={closeBtn} alt='close button' /></button>
                 <img src={rulesImg} alt='rules' />
             </div>
@@ -17,7 +17,7 @@ const Rules = () => {
 
   return (
     <div>
-        <button onClick={() => setShowRules(true)}>RULES</button>
+        <button onClick={() => setShowRules(true)}>Rules</button>
         {showRules && <RulesBox />}
     </div>
   )
