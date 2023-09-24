@@ -7,7 +7,7 @@ const Header = () => {
     const {state : { score }} = useContext(ScoreContext)
 
   return (
-    <header>
+    <header className='flex items-center'>
         <ul>
             {gameOptions.map((gameOption, index) => 
                 <li key={index}>
@@ -16,7 +16,7 @@ const Header = () => {
             )}
         </ul>
 
-        <div>
+        <div className='grid justify-items-center'>
             <p>Score</p>
             <h1>{score}</h1>
         </div>

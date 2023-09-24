@@ -8,31 +8,31 @@ export const options = [
     {
         name: 'scissors',
         img: scissorsImg,
-        border: 'hsl(39, 89%, 49%)',
-        shadow: 'hsl(40, 84%, 53%)'
+        shadow: 'hsl(39, 89%, 49%)',
+        border: 'hsl(40, 84%, 53%)'
     },
     {
         name: 'paper',
         img: paperImg,
-        border: 'hsl(230, 89%, 62%)',
-        shadow: 'hsl(230, 89%, 65%)'
+        shadow: 'hsl(230, 89%, 62%)',
+        border: 'hsl(230, 89%, 65%)'
     },
     {
         name: 'rock',
         img: rockImg,
-        border: 'hsl(349, 71%, 52%)',
-        shadow: 'hsl(349, 70%, 56%)'
+        shadow: 'hsl(349, 71%, 52%)',
+        border: 'hsl(349, 70%, 56%)'
     },
     {
         name: 'lizard',
         img: lizardImg,
-        border: 'hsl(261, 73%, 60%)',
-        shadow: 'hsl(261, 72%, 63%)'
+        shadow: 'hsl(261, 73%, 60%)',
+        border: 'hsl(261, 72%, 63%)'
     },
     {
         name: 'spock',
         img: spockImg,
-        border: 'hsl(189, 59%, 53%)',
-        shadow: 'hsl(189, 58%, 57%)'
+        shadow: 'hsl(189, 59%, 53%)',
+        border: 'hsl(189, 58%, 57%)'
     },
 ]
