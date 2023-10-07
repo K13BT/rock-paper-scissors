@@ -44,10 +44,10 @@ const GamePlay = ({playerCard, setGameOngoing}) => {
         
         {showResult && (
           <section className='mx-3 row-start-2 col-start-1 col-end-3 md:mb-20 md:mt-0 mt-10'>
-            <p className='text-5xl mb-2'>
+            <p className='mb:text-5xl text-6xl mb:mb-2 mb-4'>
               {state.winner === 'Player' ? 'You Win' : state.winner === 'House' ? 'You Lose' : 'Draw'}
             </p>
-            <button onClick={onPlayAgain} className='bg-white text-dark_text px-10 py-2 rounded-md'>Play again</button>
+            <button onClick={onPlayAgain} className='bg-white text-dark_text mb:px-10 py-2 rounded-md text-lg px-14'>Play again</button>
           </section>
         )}
 
