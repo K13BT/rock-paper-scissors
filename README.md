@@ -24,15 +24,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot/screenshot1.png)
-![](./screenshot/screenshot2.png)
-![](./screenshot/screenshot3.png)
-![](./screenshot/screenshot4.png)
+![](./screenshots/screenshot1.png)
+![](./screenshots/screenshot2.png)
+![](./screenshots/screenshot3.png)
+![](./screenshots/screenshot4.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-ynldd9b2fa)
-- Live Site URL: [Add live site URL here](https://rock-paper-scissors-k13bt.vercel.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-ynldd9b2fa)
+- Live Site URL: [Live site](https://rock-paper-scissors-k13bt.vercel.app/)
 
 ## My process
 
