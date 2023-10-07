@@ -7,8 +7,10 @@ const GamePlay = ({playerCard, setGameOngoing}) => {
   const [houseCard, setHouseCard] = useState({})
   const {dispatch, state} = useContext(ScoreContext)
   const [showResult, setShowResult] = useState(false)
+  const [house, setHouse] = useState(false)
 
   useEffect(() => {
+    dispatch({type: 'RESET_WINNER'})
     setTimeout(() => {
       determineGameResult()
     }, 1000)
@@ -19,9 +21,13 @@ const GamePlay = ({playerCard, setGameOngoing}) => {
     const randomCard = options[randomNum]
     setHouseCard(randomCard)
 
-    dispatch({payload: {playerCard: playerCard.name, houseCard: randomCard.name}})
+    dispatch({type: 'UPDATE_SCORE', payload: {playerCard: playerCard.name, houseCard: randomCard.name}})
 
-    setShowResult(true)
+    setHouse(true)
+
+    setTimeout(() => {  
+      setShowResult(true)  
+    }, 1000)
   }
 
   const onPlayAgain = () => {
@@ -30,23 +36,25 @@ const GamePlay = ({playerCard, setGameOngoing}) => {
   }
 
   return (
-    <main>
-        <section>
-          <h3>You picked</h3>
-          <OptionCard option={playerCard} />
+    <main className='grid grid-cols-2 grid-rows-2 md:flex items-center mt-16 md:mt-40 justify-between lg:scale-150 md:scale-125 text-center gap-x-5 md:mb-20'>
+        <section className='relative md:mb-0 mb-20'>
+          <h3 className='absolute right-1/2 translate-x-1/2 md:-top-16 -bottom-24 font-bold text-lg'>You picked</h3>
+          <OptionCard option={playerCard} winner={state.winner === 'Player' ? true : false} />
         </section>
-
-        <section>
-          <h3>The house picked</h3>
-          <OptionCard option={houseCard} />
-        </section>
-
+        
         {showResult && (
-          <section>
-            {state.result}
-            <button onClick={onPlayAgain}>Play again</button>
+          <section className='mx-3 row-start-2 col-start-1 col-end-3 md:mb-20 md:mt-0 mt-10'>
+            <p className='text-5xl mb-2'>
+              {state.winner === 'Player' ? 'You Win' : state.winner === 'House' ? 'You Lose' : 'Draw'}
+            </p>
+            <button onClick={onPlayAgain} className='bg-white text-dark_text px-10 py-2 rounded-md'>Play again</button>
           </section>
         )}
+
+        <section className='relative md:mb-0 mb-20'>
+          <h3 className='absolute right-1/2 translate-x-1/2 md:-top-16 -bottom-28 font-bold text-lg'>The house picked</h3>
+          <OptionCard option={houseCard} bg={house ? 'white' : 'hsl(229, 25%, 31%)' } winner={state.winner === 'House' ? true : false} />
+        </section>
     </main>
   )
 }

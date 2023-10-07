@@ -3,9 +3,9 @@ import OptionCard from "./OptionCard"
 
 const GameOptions = ({onOptionSelect}) => {
   return (
-    <main>
+    <main className="grid optionCard justify-items-center mb-20">
         {options.map((option, index) => (
-            <button key={index} onClick={() => onOptionSelect(option.name)}>
+            <button key={index} onClick={() => onOptionSelect(option.name)} className="focus:outline-none">
                 <OptionCard option={option} />
             </button>
         ))}

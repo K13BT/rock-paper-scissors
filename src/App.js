@@ -17,11 +17,13 @@ function App() {
   }
 
   return (
-    <Context>
-      <Header />
-      {gameOngoing ? <GamePlay playerCard={playerCard} setGameOngoing={setGameOngoing} /> : <GameOptions onOptionSelect={onOptionSelect}/>}
-      <Rules />
-    </Context>
+    <div className="grid justify-items-center">
+      <Context>
+        <Header />
+        {gameOngoing ? <GamePlay playerCard={playerCard} setGameOngoing={setGameOngoing} /> : <GameOptions onOptionSelect={onOptionSelect}/>}
+        <Rules />
+      </Context>
+    </div>
   );
 }
 
